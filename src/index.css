@@ -1,1 +1,39 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #111111 0%, #290c00 50%, #3e1900 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  :root {
+    --color-heading: #f5f0eb;
+    --color-subheading: #e8e0d8;
+    --color-body: #a89f96;
+    --color-muted: #6b6460;
+    --color-accent: #f97316;
+  }
+}
+
+@layer components {
+  .container-wrapper {
+    @apply max-w-[1440px] mx-auto w-full px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2.5 rounded-full bg-orange-500 text-white font-medium text-sm
+    hover:bg-orange-400 transition-colors duration-200 cursor-pointer;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-2.5 rounded-full border border-white/20 text-(--color-heading) 
+    font-medium text-sm hover:border-orange-500/50 hover:text-orange-400 
+    transition-all duration-200 cursor-pointer;
+  }
+}

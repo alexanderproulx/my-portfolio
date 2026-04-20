@@ -1,9 +1,10 @@
-import React from "react"
+import Navbar from "./components/Responsive-Navbar"
 
 function App() {
 
   return (
     <>
+      <Navbar />
     </>
   )
 }
